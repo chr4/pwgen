@@ -1,5 +1,7 @@
 # pwgen
 
+[![Build Status](https://travis-ci.org/chr4/go-pwgen.svg?branch=master)](https://travis-ci.org/chr4/go-pwgen)
+
 Go library to generate a random string of a given length
 
 # Installation
