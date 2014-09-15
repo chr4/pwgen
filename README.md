@@ -23,6 +23,10 @@ import (
 )
 
 func main() {
-    fmt.Print(pwgen.New(20))
+    // The following functions will generate 20 chars long passwords out of
+    fmt.Print(pwgen.New(20, "ab"))       // a's and b's
+    fmt.Print(pwgen.Num(20))             // numbers
+    fmt.Print(pwgen.AlphaNum(20))        // alphanumeric characters
+    fmt.Print(pwgen.AlphaNumSymbols(20)) // alphanumeric characters and symbols
 }
 ```
