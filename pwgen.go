@@ -6,8 +6,10 @@ import (
 
 // Characters the password can contain
 var num = "0123456789"
-var alphaNum = num + "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-var alphaNumSymbols = alphaNum + "_-?!.,@#$%^&*()=[]{}<>"
+var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+var symbols = "_-?!.,@#$%^&*()=[]{}<>"
+var alphaNum = num + alpha
+var alphaNumSymbols = alphaNum + symbols
 
 // New generates a random string of the given length out of the characters in char
 func New(length int, chars string) string {
@@ -24,6 +26,16 @@ func New(length int, chars string) string {
 // Num generates a random string of the given length out of numeric characters
 func Num(length int) string {
 	return New(length, num)
+}
+
+// Alpha generates a random string of the given length out of alphabetic characters
+func Alpha(length int) string {
+	return New(length, alpha)
+}
+
+// Symbols generates a random string of the given length out of symbols
+func Symbols(length int) string {
+	return New(length, symbols)
 }
 
 // AlphaNum generates a random string of the given length out of alphanumeric characters
