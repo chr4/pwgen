@@ -28,7 +28,7 @@ func Num(length int) string {
 	return New(length, num)
 }
 
-// Alpha generates a random string of the given length out of alphabets
+// Alpha generates a random string of the given length out of alphabetic characters
 func Alpha(length int) string {
 	return New(length, alpha)
 }
